@@ -34,7 +34,7 @@ public class BPM extends Activity {
     		averageWait = ((sumWait/1000)/4);
     		
     		alertDialog.setTitle("BPM Found.");
-    		alertDialog.setMessage("BPM is: " + (averageWait*60));
+    		alertDialog.setMessage(sumWait+ "BPM is: " + (averageWait*60));
     		alertDialog.show();
     	}
     	

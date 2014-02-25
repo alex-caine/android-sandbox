@@ -10,8 +10,8 @@ public class BPM extends Activity {
 	
 	long[] pushTimes = new long[5];
 	int counter = 5;
-	double sumWait = 0;
-	double averageWait;
+	int sumWait = 0;
+	int averageWait;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,7 +29,7 @@ public class BPM extends Activity {
     	} else {
     		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
     		
-    		sumWait = (double)(pushTimes[4] - pushTimes[0]);
+    		sumWait = (int)(pushTimes[4] - pushTimes[0]);
     		
     		averageWait = ((sumWait/1000)/4);
     		

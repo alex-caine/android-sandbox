@@ -10,8 +10,8 @@ public class BPM extends Activity {
 	
 	long[] pushTimes = new long[5];
 	int counter = 5;
-	double sumWait = 0;
-	double averageWait;
+	int sumWait = 0;
+	int averageWait;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,18 +23,18 @@ public class BPM extends Activity {
     
     public void btnPressed(View view) {
 		
-    	if (counter > 0){
+    	if (counter > 1){
     		pushTimes[counter-1] = System.currentTimeMillis();
     		counter--;
     	} else {
     		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
     		
-    		sumWait = (double)(pushTimes[4] - pushTimes[0]);
+    		sumWait = (int)(pushTimes[4] - pushTimes[0]);
     		
     		averageWait = ((sumWait/1000)/4);
     		
     		alertDialog.setTitle("BPM Found.");
-    		alertDialog.setMessage("BPM is: " + (averageWait*60));
+    		alertDialog.setMessage("BPM is: " + pushTimes[0] + " " + pushTimes[4]);
     		alertDialog.show();
     	}
     	

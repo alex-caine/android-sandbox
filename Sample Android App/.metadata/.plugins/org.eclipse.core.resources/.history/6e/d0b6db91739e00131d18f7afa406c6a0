@@ -9,9 +9,10 @@ import android.view.View;
 public class BPM extends Activity {
 	
 	long[] pushTimes = new long[5];
-	int counter = 5;
-	double sumWait = 0;
-	double averageWait;
+	int counter = 4;
+	int total = 0;
+	int sumWait = 0;
+	int averageWait;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +30,13 @@ public class BPM extends Activity {
     	} else {
     		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
     		
-    		sumWait = (double)(pushTimes[4] - pushTimes[0]);
+    		sumWait = (int)(pushTimes[4] - pushTimes[0]);
     		
-    		averageWait = ((sumWait/1000)/4);
+    		//averageWait = ((sumWait/total)/1000);
+    		//averageWait = 0;
     		
     		alertDialog.setTitle("BPM Found.");
-    		alertDialog.setMessage("BPM is: " + (averageWait*60));
+    		alertDialog.setMessage("Put bpm here");
     		alertDialog.show();
     	}
     	
