@@ -1,0 +1,11 @@
+
+public class Sandbox {
+	
+	public static void main(String[] args){
+		
+		long test = System.currentTimeMillis();
+		System.out.println(test);
+		
+	}
+
+}

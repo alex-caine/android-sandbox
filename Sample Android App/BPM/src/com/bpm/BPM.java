@@ -10,6 +10,7 @@ public class BPM extends Activity {
 	
 	long[] pushTimes = new long[5];
 	int counter = 5;
+	int averageWait;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,13 @@ public class BPM extends Activity {
     		pushTimes[counter-1] = System.currentTimeMillis();
     		counter--;
     	} else {
+    		
+    		for (int i=5;i>0;i++){
+    			
+    			
+    			
+    		}
+    		
     		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
     		alertDialog.setTitle("BPM Found.");
     		alertDialog.setMessage("BPM is equal to: " + pushTimes[3]);
