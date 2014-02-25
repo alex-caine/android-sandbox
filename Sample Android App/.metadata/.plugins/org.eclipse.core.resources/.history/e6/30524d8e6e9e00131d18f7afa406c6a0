@@ -8,10 +8,8 @@ import android.view.View;
 
 public class BPM extends Activity {
 	
-	long[] pushTimes = new long[4];
-	int counter = 4;
-	int total = 0;
-	int sumWait = 0;
+	long[] pushTimes = new long[5];
+	int counter = 5;
 	int averageWait;
 
     @Override
@@ -28,18 +26,16 @@ public class BPM extends Activity {
     		pushTimes[counter-1] = System.currentTimeMillis();
     		counter--;
     	} else {
+    		
+    		for (int i=5;i>0;i++){
+    			
+    			
+    			
+    		}
+    		
     		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
-    		
-    		/* for (int i=4;i>0;i--){
-    			sumWait += (pushTimes[i-1] - pushTimes[i]);
-    			total++;
-    		} */
-    		
-    		//averageWait = ((sumWait/total)/1000);
-    		//averageWait = 0;
-    		
     		alertDialog.setTitle("BPM Found.");
-    		alertDialog.setMessage("Put bpm here");
+    		alertDialog.setMessage("BPM is equal to: " + pushTimes[3]);
     		alertDialog.show();
     	}
     	

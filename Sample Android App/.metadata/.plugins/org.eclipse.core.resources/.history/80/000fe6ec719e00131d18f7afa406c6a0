@@ -30,16 +30,15 @@ public class BPM extends Activity {
     	} else {
     		AlertDialog alertDialog = new AlertDialog.Builder(this).create();
     		
-    		/* for (int i=4;i>0;i--){
+    		for (int i=4;i>0;i--){
     			sumWait += (pushTimes[i-1] - pushTimes[i]);
     			total++;
-    		} */
+    		} 
     		
-    		//averageWait = ((sumWait/total)/1000);
-    		//averageWait = 0;
+    		averageWait = ((sumWait/total)/1000);
     		
     		alertDialog.setTitle("BPM Found.");
-    		alertDialog.setMessage("Put bpm here");
+    		alertDialog.setMessage(pushTimes[0] + " " + pushTimes[1] + " " + pushTimes[2] + " "/* + pushTimes[3]*/);
     		alertDialog.show();
     	}
     	
