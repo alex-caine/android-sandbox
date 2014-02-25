@@ -1,0 +1,4 @@
+INDEX VERSION 1.126+/Users/alexcaine/Dropbox/Sample Android App/.metadata/.plugins/org.eclipse.jdt.core
+2320416775.index
+1736100846.index
+417159587.index

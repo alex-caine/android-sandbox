@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;imageButton1&apos; in &apos;com.bpm.R.id&apos; to &apos;btnBPM&apos;&#x0A;- Original project: &apos;BPM&apos;&#x0A;- Original element: &apos;com.bpm.R.id.imageButton1&apos;&#x0A;- Renamed element: &apos;com.bpm.R.id.btnBPM&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="true" description="Rename field &apos;imageButton1&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/gen&lt;com.bpm{R.java[R[id^imageButton1" name="btnBPM" references="true" setter="false" stamp="1393360720081" textual="false" version="1.0"/>
+</session>
