@@ -16,7 +16,6 @@ public class BPM extends Activity {
 	double sumWait = 0;
 	double averageWait;
 
-<<<<<<< HEAD
 	//int curNum = 5; may be unncessary. Original purpose was for # of taps remaining
 	String disp = " taps remaining.";
 	
@@ -57,15 +56,10 @@ public class BPM extends Activity {
     	
     }*/
 >>>>>>> FETCH_HEAD
-=======
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bpm);
-        
-    }
->>>>>>> parent of f220ba2... Added one line that lets people cancel dialog message with outside touch
     
+    /**********************************************
+     *  Main function for BPM calculation
+     **********************************************/
     
     public void btnPressed(View view) {
     	
@@ -88,11 +82,18 @@ public class BPM extends Activity {
     		bpmInfoAlert.setTitle("BPM Found.");
     		bpmInfoAlert.setMessage("BPM is: " + (averageWait*60));
     		bpmInfoAlert.show();
+    		bpmInfoAlert.setCanceledOnTouchOutside(true); // Cancels the message with outside touch
     		
     	}
     	
     }
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_bpm);
+        
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
