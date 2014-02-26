@@ -1,4 +1,4 @@
-INDEX VERSION 1.126+C:\Users\Lenovo T410\Desktop\okay\.metadata\.plugins\org.eclipse.jdt.core
-1633113809.index
-4194113283.index
-1012538276.index
+INDEX VERSION 1.126+/Users/alexcaine/Dropbox/Repository/android-sandbox/.metadata/.plugins/org.eclipse.jdt.core
+281509436.index
+2320416775.index
+1927741661.index
