@@ -15,7 +15,7 @@ public class BPM extends Activity {
 	int counter = 0;
 	double sumWait = 0;
 	double averageWait;
-	int curNum = 4;
+	int curNum = 5;
 	String disp = " taps remaining.";
 	
     @Override
@@ -36,9 +36,8 @@ public class BPM extends Activity {
     	if (counter < 4){
     		pushTimes[counter] = System.currentTimeMillis();
     		counter++;
-    		curNum--;
     	} else {
-    		curNum = 0;
+    		
     		pushTimes[counter] = System.currentTimeMillis();
     				
     		//Finds total time between first and last button push and

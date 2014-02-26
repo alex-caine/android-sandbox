@@ -15,7 +15,7 @@ public class BPM extends Activity {
 	int counter = 0;
 	double sumWait = 0;
 	double averageWait;
-	int curNum = 4;
+	//int curNum = 5; may be unnecessary. Original purpose was for # of taps remaining
 	String disp = " taps remaining.";
 	
     @Override
@@ -29,16 +29,15 @@ public class BPM extends Activity {
     public void btnPressed(View view) {
     	
     	TextView text = (TextView) findViewById(R.id.tapsRemaining);
-    	text.setText(curNum + disp);
+    	text.setText("test");
     	
     	//For 4 presses, add time of press to pushTimes
     	//On 5th press, add final time to pushTimes and display bpm data
     	if (counter < 4){
     		pushTimes[counter] = System.currentTimeMillis();
     		counter++;
-    		curNum--;
     	} else {
-    		curNum = 0;
+    		
     		pushTimes[counter] = System.currentTimeMillis();
     				
     		//Finds total time between first and last button push and

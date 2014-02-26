@@ -30,6 +30,6 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/btnBPM"
         android:layout_alignLeft="@+id/btnBPM"
-        android:text="@string/trText" />
+        android:text="5 taps remaining." />
 
 </RelativeLayout>
