@@ -19,17 +19,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="22dp"
         android:contentDescription="@string/hello_world"
         android:onClick="btnPressed"
         android:src="@drawable/record" />
-
-    <TextView
-        android:id="@+id/tapsRemaining"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnBPM"
-        android:layout_alignLeft="@+id/btnBPM"
-        android:text="5 taps remaining." />
 
 </RelativeLayout>
