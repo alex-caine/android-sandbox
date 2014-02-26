@@ -25,16 +25,12 @@ public class BPM extends Activity {
     
     public void btnPressed(View view) {
     	
-    	//For 5 presses, add time of press to pushTimes
-    	//On 5th press, display bpm data
-    	if (counter < 4){
+    	if (counter < 5){
     		pushTimes[counter] = System.currentTimeMillis();
     		counter++;
     		System.out.println(counter);
     	} else {
     		
-    		pushTimes[counter] = System.currentTimeMillis();
-    				
     		//Finds total time between first and last button push and
     		//divides by number of clicks 
     		sumWait = (double)(pushTimes[4] - pushTimes[0]);

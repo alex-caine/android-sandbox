@@ -8,10 +8,8 @@ import android.view.View;
 
 public class BPM extends Activity {
 	
-	//pushTimes = array of times button was pushed (in milliseconds)
-	//sumWait initialized to 0 (only ever increases), averageWait not initialized
 	long[] pushTimes = new long[5];
-	int counter = 0;
+	int counter = 5;
 	double sumWait = 0;
 	double averageWait;
 
@@ -25,16 +23,12 @@ public class BPM extends Activity {
     
     public void btnPressed(View view) {
     	
-    	//For 5 presses, add time of press to pushTimes
-    	//On 5th press, display bpm data
-    	if (counter < 4){
-    		pushTimes[counter] = System.currentTimeMillis();
-    		counter++;
-    		System.out.println(counter);
+    	counter--;
+    	
+    	if (counter > 0){
+    		pushTimes[counter-1] = System.currentTimeMillis();
     	} else {
     		
-    		pushTimes[counter] = System.currentTimeMillis();
-    				
     		//Finds total time between first and last button push and
     		//divides by number of clicks 
     		sumWait = (double)(pushTimes[4] - pushTimes[0]);
