@@ -4,6 +4,5 @@
     <string name="app_name">BPM</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
-    <string name="titleMessage">Welcome to the Simple BPM Counter! Tap button 5 times at the desired tempo.</string>
 
 </resources>
