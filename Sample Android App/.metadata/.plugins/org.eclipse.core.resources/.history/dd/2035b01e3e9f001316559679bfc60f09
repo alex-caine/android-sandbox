@@ -29,7 +29,7 @@
         android:layout_alignLeft="@+id/textView1"
         android:layout_alignParentBottom="true"
         android:contentDescription="@string/hello_world"
-        android:onClick="btnPressed"
+        android:onClick="btnPressedd"
         android:src="@drawable/record" />
 
     <Button
@@ -41,7 +41,7 @@
         android:layout_below="@+id/textView1"
         android:layout_marginLeft="40dp"
         android:layout_toRightOf="@+id/tapsRemaining"
-        android:onClick="resetButtonPressed"
+        android: onClick = "resetButtonPressed"
         android:text="Reset" />
 
 </RelativeLayout>

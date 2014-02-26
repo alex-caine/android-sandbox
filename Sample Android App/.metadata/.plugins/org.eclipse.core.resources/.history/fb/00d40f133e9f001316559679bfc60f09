@@ -14,14 +14,6 @@
         android:layout_height="wrap_content"
         android:text="@string/titleMessage" />
 
-    <TextView
-        android:id="@+id/tapsRemaining"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/btnBPM"
-        android:layout_alignLeft="@+id/btnBPM"
-        android:text="@string/trText" />
-
     <ImageButton
         android:id="@+id/btnBPM"
         android:layout_width="wrap_content"
@@ -32,16 +24,12 @@
         android:onClick="btnPressed"
         android:src="@drawable/record" />
 
-    <Button
-        android:id="@+id/btnReset"
+    <TextView
+        android:id="@+id/tapsRemaining"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/tapsRemaining"
-        android:layout_alignRight="@+id/btnBPM"
-        android:layout_below="@+id/textView1"
-        android:layout_marginLeft="40dp"
-        android:layout_toRightOf="@+id/tapsRemaining"
-        android:onClick="resetButtonPressed"
-        android:text="Reset" />
+        android:layout_above="@+id/btnBPM"
+        android:layout_alignLeft="@+id/btnBPM"
+        android:text="@string/trText" />
 
 </RelativeLayout>
