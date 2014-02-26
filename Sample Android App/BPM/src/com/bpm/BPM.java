@@ -15,51 +15,16 @@ public class BPM extends Activity {
 	int counter = 0;
 	double sumWait = 0;
 	double averageWait;
-
 	//int curNum = 5; may be unncessary. Original purpose was for # of taps remaining
 	String disp = " taps remaining.";
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-       
+        setContentView(R.layout.activity_bpm);
         
     }
-=======
-	
-	int counter2 = 4;
     
-    /**********************************************
-     * Just playing around with functionality here!
-     **********************************************/
-    /*public void btnPressed(View view) {
-    	
-    	if (counter2 > 0) {
-    		
-    		AlertDialog bpmInfoAlert = new AlertDialog.Builder(this).create();
-    		bpmInfoAlert.setTitle("Test");
-    		bpmInfoAlert.setMessage("BPM is: " + counter2);
-    		bpmInfoAlert.show();
-    		bpmInfoAlert.setCanceledOnTouchOutside(true);
-    		counter2--;
-    		
-    	}
-    	else {
-    		AlertDialog bpmInfoAlert = new AlertDialog.Builder(this).create();
-    		
-    		bpmInfoAlert.setMessage("0");
-    		bpmInfoAlert.setCanceledOnTouchOutside(true);
-    		bpmInfoAlert.show();
-    		
-    	}
-    		
-    	
-    }*/
->>>>>>> FETCH_HEAD
-    
-    /**********************************************
-     *  Main function for BPM calculation
-     **********************************************/
     
     public void btnPressed(View view) {
     	
@@ -82,18 +47,11 @@ public class BPM extends Activity {
     		bpmInfoAlert.setTitle("BPM Found.");
     		bpmInfoAlert.setMessage("BPM is: " + (averageWait*60));
     		bpmInfoAlert.show();
-    		bpmInfoAlert.setCanceledOnTouchOutside(true); // Cancels the message with outside touch
     		
     	}
     	
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_bpm);
-        
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
