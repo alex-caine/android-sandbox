@@ -41,7 +41,7 @@
         android:layout_below="@+id/textView1"
         android:layout_marginLeft="40dp"
         android:layout_toRightOf="@+id/tapsRemaining"
-        android:onClick="resetButtonPressed"
+        android:onClick="btnPressed"
         android:text="Reset" />
 
 </RelativeLayout>
