@@ -18,6 +18,8 @@ public class BPM extends Activity {
 	int curNum = 4;
 	String disp = " taps remaining.";
 	
+	//hello
+	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
