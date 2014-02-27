@@ -11,34 +11,20 @@ public class BPM extends Activity {
 	
 	//pushTimes = array of times button was pushed (in milliseconds)
 	//sumWait initialized to 0 (only ever increases), averageWait not initialized
-	long[] pushTimes;
-	int counter;
-	double sumWait;
+	long[] pushTimes = new long[5];
+	int counter = 0;
+	double sumWait = 0;
 	double averageWait;
-	int curNum;
+	int curNum = 4;
 	String disp = " taps remaining.";
-	
-	private void initializeVariables() {
-		TextView text = (TextView) findViewById(R.id.tapsRemaining);
-    	text.setText("5 taps remaining.");
-    	pushTimes = new long[5];
-    	counter=0;
-    	curNum = 4;
-    	sumWait = 0;
-    }
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bpm);
-        initializeVariables();
         
     }
     
-    
-    public void resetButtonPressed(View view) {
-    	initializeVariables();
-    }
     
     public void btnPressed(View view) {
     	
@@ -51,13 +37,7 @@ public class BPM extends Activity {
     		pushTimes[counter] = System.currentTimeMillis();
     		counter++;
     		curNum--;
-    	} else if (counter==5){
-    		AlertDialog resetAlert = new AlertDialog.Builder(this).create();
-    		resetAlert.setTitle("Reset.");
-    		resetAlert.setMessage("BPM was found to be: " + (averageWait*60) + ". Please press reset to find another tempo.");
-    		resetAlert.show();
     	} else {
-    		
     		curNum = 0;
     		pushTimes[counter] = System.currentTimeMillis();
     				
@@ -71,9 +51,9 @@ public class BPM extends Activity {
     		bpmInfoAlert.setTitle("BPM Found.");
     		bpmInfoAlert.setMessage("BPM is: " + (averageWait*60));
     		bpmInfoAlert.show();
-    		counter++;
     		
-    	}	
+    	}
+    	
     }
 
 
@@ -83,7 +63,6 @@ public class BPM extends Activity {
         getMenuInflater().inflate(R.menu.bpm, menu);
         return true;
     }
-    
     
     
     
