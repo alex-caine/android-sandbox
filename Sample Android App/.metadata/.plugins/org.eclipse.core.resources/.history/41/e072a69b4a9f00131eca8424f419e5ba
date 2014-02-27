@@ -7,9 +7,6 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
-//Hello from alex
-
-
 public class BPM extends Activity {
 	
 	//pushTimes = array of times button was pushed (in milliseconds)
